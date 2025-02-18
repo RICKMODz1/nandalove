@@ -17,7 +17,7 @@ onload = () => {
     audio.play().catch(error => console.log("Erro ao tocar a música:", error));
 
     setTimeout(() => {
-      window.location.assign ("love_counter.html", "_blank");
+      window.open ("love_counter.html", "_blank");
     }, 500);
   });
 });
