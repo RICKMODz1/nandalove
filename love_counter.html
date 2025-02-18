@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Amor</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="assets/music/Love_song_cut.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <div class="hearts"></div>
+    <div class="container">
+        <div class="carousel">
+            <button class="prev" onclick="prevPhoto()">&#10094;</button>
+            <img class="photo active" src="assets/images/photo1.jpeg" alt="Photo 1">
+            <img class="photo" src="assets/images/photo2.jpeg" alt="Photo 2">
+            <img class="photo" src="assets/images/photo3.jpeg" alt="Photo 3">
+            <img class="photo" src="assets/images/photo4.jpeg" alt="Photo 4">
+            <img class="photo" src="assets/images/photo5.jpeg" alt="Photo 5">
+            <img class="photo" src="assets/images/photo6.jpeg" alt="Photo 6">
+            <button class="next" onclick="nextPhoto()">&#10095;</button>
+        </div>
+        
+        <h1>Pietro e Fernanda</h1>
+
+        <p>Desde o instante em que começamos a namorar,<br>
+            algo dentro de mim se transformou.<br>
+            <br>
+            Eu sabia que havia encontrado alguém especial<br>
+            mas com o passar do tempo, percebi que<br>
+            havia encontrado o amor da minha vida.<br>
+            Seus olhos, tão brilhantes,<br>
+            são como faróis que guiam meu caminho.<br>
+            Seu cabelo, a moldura perfeita do seu rosto,<br>
+            é a coisa mais linda que já vi.<br>
+            <br>
+            Não consigo expressar o quanto você me faz feliz.<br>
+            Te amo de uma forma que palavras não conseguem<br>
+            alcançar, e esse sentimento só cresce<br>
+            a cada novo amanhecer.<br>
+            Este é apenas mais um capítulo da nossa história,<br>
+            e, a cada dia que passa,<br>
+            me sinto mais grato por ter você ao meu lado.<br>
+            <br>
+            Nosso relacionamento é construído com amor,<br>
+            respeito e momentos inesquecíveis que<br>
+            fazem parte de quem somos.<br>
+            Você é a minha melhor escolha, e sou<br>
+            profundamente feliz por caminhar ao seu lado.<br>
+            Te amo de um jeito que palavras jamais<br>
+            serão capazes de explicar.</p>
+
+        <h2>Compartilhando momentos há:</h2>
+
+        <ddiv class="counter">
+            <div class="counter-column">
+                <div style="background-color: black;"><strong id="years"><?php echo $years; ?></strong>Anos</div>
+                <div style="background-color: black;"><strong id="days"><?php echo $days; ?></strong>Dias</div>
+                <div style="background-color: black;"><strong id="minutes"><?php echo $minutes; ?></strong>Minutos</div>
+            </div>
+            <div class="counter-column">
+                <div style="background-color: black;"><strong id="months"><?php echo $months; ?></strong>Meses</div>
+                <div style="background-color: black;"><strong id="hours"><?php echo $hours; ?></strong>Horas</div>
+                <div style="background-color: black;"><strong id="seconds"><?php echo $seconds; ?></strong>Segundos</div>
+            </div>
+        </div>
+        <p>Desde 09 de Dezembro de 2024</p>
+    </div>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

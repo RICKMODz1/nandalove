@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Birds of Paradise';
+    src: url('../fonts/Birds_of_Paradise.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'PlayfairDisplay-Black';
+    src: url('../fonts/PlayfairDisplay-Black.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.container {
+    margin-top: 50px;
+    position: relative;
+    z-index: 10;
+
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 30px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel img {
+    max-height: 100%;
+    max-width: 100%;
+    display: none;
+    border-radius: 10px;
+    object-fit: contain;
+}
+.carousel img.active {
+    display: block;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    z-index: 20;
+    font-size: 24px;
+    border-radius: 50%;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+.counter {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.counter-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.counter div {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 16px;
+}
+.counter div strong {
+    display: block;
+    font-size: 32px;
+}
+h1 {
+    font-family: 'Birds of Paradise', cursive;
+    color: red;
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: glowing 10s infinite alternate;
+}
+p {
+    font-size: 15px;
+    color: #a9a9a9;
+}
+h2 {
+    font-size: 20px;
+    font-family: 'PlayfairDisplay-Black', serif;
+}
+.hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    animation: fall linear infinite;
+}
+@keyframes glowing {
+    0% { text-shadow: 0 0 0.5px red, 0 0 1px red; }
+    50% { text-shadow: 0 0 1px white, 0 0 2px red; }
+    100% { text-shadow: 0 0 0.5px red, 0 0 1px red; }
+}
+@keyframes fall {
+    0% { transform: translateY(-10vh) scale(1); opacity: 1; }
+    100% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+}
